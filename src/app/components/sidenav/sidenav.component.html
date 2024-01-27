@@ -1,0 +1,52 @@
+<router-outlet>
+
+<mat-sidenav-container class="app-container" >
+    <mat-sidenav #sidenav mode="side"  opened="{{isopened}}">
+        <mat-nav-list>
+            <mat-list-item   routerLink="#" >
+                <mat-icon >dashboard</mat-icon><span>Dashboard</span>
+                
+            </mat-list-item>
+            <mat-expansion-panel  [class.mat-elevation-z0]="true">
+                <mat-expansion-panel-header>
+                       FITHUB
+                </mat-expansion-panel-header>
+                <mat-nav-list>
+                    <a mat-list-item routerLink="/programs">
+                        <mat-icon>fitness_center </mat-icon><span> Programs </span>
+                    </a>
+                    <a mat-list-item routerLink="/schedule">
+                        <mat-icon>schedule </mat-icon><span> Schedule </span>
+                    </a>
+                    <a mat-list-item routerLink="/about">
+                        <mat-icon>description </mat-icon><span> About </span>
+                    </a>
+                    <a mat-list-item routerLink="/coaches">
+                        <mat-icon>fitness_center </mat-icon><span> Coaches </span>
+                    </a>                    
+                </mat-nav-list>
+            </mat-expansion-panel>
+            <mat-list-item   routerLink="/snackshop" >
+                <mat-icon >shopping_cart</mat-icon><span>SnackShop</span>
+                
+            </mat-list-item>
+            <mat-list-item   routerLink="/subscription" >
+                <mat-icon >subscriptions</mat-icon><span>Subscription</span>
+                
+            </mat-list-item>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <router-outlet>
+            <div class="app-sidenav-content">
+                Components open here
+            </div>
+        </router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container> 
+    
+    </router-outlet>
+    
+    
+    
+    
