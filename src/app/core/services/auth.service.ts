@@ -32,6 +32,7 @@ export class AuthService {
   logout(): void {
     localStorage.removeItem(this.authSecretKey);
     this.isAuthenticated = false;
+    
   }
 }
 

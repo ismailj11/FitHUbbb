@@ -9,6 +9,7 @@ import { AboutComponent } from './components/about/about.component';
 import { PersonComponent } from './components/person-crud/person/person.component';
 import { SubscriptionComponent } from './components/subscription/subscription.component';
 import { SnackshopComponent } from './components/snackshop/snackshop.component';
+import { TranslationComponent } from './components/translation/translation.component';
 
 const routes: Routes = [
   
@@ -72,6 +73,10 @@ component: ScheduleComponent
   canActivate:[authGuard]
 }
 
+,{
+  path:'translation',
+  component:TranslationComponent
+}
 ];
 
 @NgModule({

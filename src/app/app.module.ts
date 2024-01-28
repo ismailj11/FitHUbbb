@@ -4,11 +4,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-
+import { provideHttpClient, withFetch } from '@angular/common/http';
 import { SharedModule } from './shared/shared.module';
 import {MatSelectModule} from '@angular/material/select';
 
 import { ToastrModule } from 'ngx-toastr';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatIconModule} from '@angular/material/icon';
@@ -40,6 +41,11 @@ import {MatCardModule} from '@angular/material/card';
 import { MatRadioModule } from '@angular/material/radio';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { SnackshopComponent } from './components/snackshop/snackshop.component';
+import { TranslateModule} from '@ngx-translate/core';
+import {TranslateLoader} from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
+import { TranslationComponent } from './components/translation/translation.component';
 
 @NgModule({
   declarations: [
@@ -56,6 +62,7 @@ import { SnackshopComponent } from './components/snackshop/snackshop.component';
     ConfirmationDialogComponent,
     SubscriptionComponent,
     SnackshopComponent,
+    TranslationComponent,
     
  
     
@@ -65,7 +72,18 @@ import { SnackshopComponent } from './components/snackshop/snackshop.component';
     
   ],
   imports: [
-    MatInputModule,
+    
+    
+    
+    TranslateModule.forRoot({
+      loader:{
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps:[HttpClient]         
+      }
+    })
+    ,MatInputModule,
+    HttpClientModule,
     MatFormFieldModule,
     FormsModule,
     BrowserModule,
@@ -97,3 +115,6 @@ import { SnackshopComponent } from './components/snackshop/snackshop.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
+  return new TranslateHttpLoader(http);
+}
