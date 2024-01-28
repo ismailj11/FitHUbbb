@@ -3,80 +3,41 @@ import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { LoginComponent } from './components/login/login.component';
 import { authGuard } from './core/guards/auth.guard';
-import { ProgramsComponent } from './components/programs/programs.component';
-import { ScheduleComponent } from './components/schedule/schedule.component';
-import { AboutComponent } from './components/about/about.component';
-import { PersonComponent } from './components/person-crud/person/person.component';
-import { SubscriptionComponent } from './components/subscription/subscription.component';
-import { SnackshopComponent } from './components/snackshop/snackshop.component';
-import { TranslationComponent } from './components/translation/translation.component';
+import { loginGuard } from './core/guards/login.guard';
 
+import { ProgramsComponent } from './components/programs/programs.component';
+import { CoachComponent } from './components/coach/coach/coach.component';
+import { ToolbarComponent } from './components/toolbar/toolbar.component';
+import { AboutComponent } from './components/about/about.component';
 const routes: Routes = [
-  
- 
   {
     path: '',
-     redirectTo: 'login',
-     pathMatch: 'full'
+    redirectTo: 'login',
+    pathMatch: 'full',
+   
   },
-
-
-{
-  path: 'dashboard', 
-  component:DashboardComponent,
-  canActivate: [authGuard], 
-  
-  
-},
-{
-path: 'login',
-component: LoginComponent,
-
-}
-,
-{path: 'logout',
-redirectTo: '', pathMatch: 'full'
-}
-,
-{
-path: 'programs',
-component: ProgramsComponent
-
-},
-{
-path: 'schedule',
-component: ScheduleComponent
-
-},
-{
-  path: 'about',
-  component: AboutComponent
-  
+  {
+    path: 'dashboard',
+    component: ToolbarComponent,
+    canActivate: [authGuard],
+    children: [
+      { path: 'programs', component: ProgramsComponent, canActivate: [authGuard] 
+        
+    },
+    {path:'dashboard',component: DashboardComponent,canActivate: [authGuard]}
+    ,{path:'coaches',component: CoachComponent,canActivate: [authGuard]}
+    ,{path:'about',component: AboutComponent,canActivate: [authGuard]}
+    ]
   }
-  ,
-  {
-    path:'coaches',
-    component: PersonComponent,
-    canActivate:[authGuard]
-  },
-
-  {
-  path:'subscription',
-  component: SubscriptionComponent,
-  canActivate:[authGuard]
-}
-,
   
+  ,
+  
+    
   {
-  path:'snackshop',
-  component: SnackshopComponent,
-  canActivate:[authGuard]
-}
-
-,{
-  path:'translation',
-  component:TranslationComponent
-}
+    path: 'login',
+    component: LoginComponent,
+    canActivate: [loginGuard]
+  }
 ];
 
 @NgModule({

@@ -1,13 +1,13 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { AuthService } from '../../core/services/auth.service';
 import { publicDecrypt } from 'crypto';
-
+import { HostListener, ViewChild } from '@angular/core';
 @Component({
   selector: 'app-toolbar',
   templateUrl: './toolbar.component.html',
   styleUrl: './toolbar.component.scss'
 })
-export class ToolbarComponent  {
+export class ToolbarComponent   {
 
    bdata: boolean=false;
 
@@ -40,5 +40,8 @@ export class ToolbarComponent  {
 
 
      color: string='#127bc';
+
+     
+
 
  }

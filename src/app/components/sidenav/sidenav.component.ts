@@ -1,6 +1,7 @@
-import { Component, Input, Output} from '@angular/core';
+import { Component, Input, OnInit, Output} from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { Router } from 'express';
+import { HostListener, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-sidenav',
@@ -15,4 +16,9 @@ export class SidenavComponent {
 
   @Input() isopened: boolean = false ;
   @Input() dashboardbtn: boolean = false ;
+
+  
+ 
+
+
 }

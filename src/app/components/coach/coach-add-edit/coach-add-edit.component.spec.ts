@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SidenavComponent } from './sidenav.component';
+import { CoachAddEditComponent } from './coach-add-edit.component';
 
-describe('SidenavComponent', () => {
-  let component: SidenavComponent;
-  let fixture: ComponentFixture<SidenavComponent>;
+describe('CoachAddEditComponent', () => {
+  let component: CoachAddEditComponent;
+  let fixture: ComponentFixture<CoachAddEditComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [SidenavComponent]
+      declarations: [CoachAddEditComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(SidenavComponent);
+    fixture = TestBed.createComponent(CoachAddEditComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

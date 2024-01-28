@@ -1,0 +1,81 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "a title",
+      "views": 100
+    },
+    {
+      "id": "2",
+      "title": "another title",
+      "views": 200
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "text": "a comment about post 1",
+      "postId": "1"
+    },
+    {
+      "id": "2",
+      "text": "another comment about post 1",
+      "postId": "1"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "coaches": [
+    {
+      "firstName": "John",
+      "lastName": "Pena",
+      "email": "Pena@example.com",
+      "age": 27,
+      "gender": "male",
+      "worktype": "Mobile Personal Trainers",
+      "experience": "",
+      "id": "55fa"
+    },
+    {
+      "id": "5be5",
+      "firstName": "",
+      "lastName": "",
+      "email": "",
+      "age": "",
+      "gender": "",
+      "worktype": "",
+      "experience": ""
+    },
+    {
+      "id": "ccec",
+      "firstName": "",
+      "lastName": "",
+      "email": "",
+      "age": "",
+      "gender": "",
+      "worktype": "",
+      "experience": ""
+    },
+    {
+      "firstName": "www",
+      "lastName": "",
+      "email": "",
+      "age": "",
+      "gender": "",
+      "worktype": "",
+      "experience": "",
+      "id": "1536"
+    },
+    {
+      "firstName": "",
+      "lastName": "",
+      "email": "",
+      "age": "",
+      "gender": "",
+      "worktype": "Mobile Personal Trainers",
+      "experience": "",
+      "id": "99be"
+    }
+  ]
+}

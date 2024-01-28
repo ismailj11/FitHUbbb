@@ -24,28 +24,28 @@ import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { ProgramsComponent } from './components/programs/programs.component';
 import { ColorPickerModule } from 'ngx-color-picker';
-import { ScheduleComponent } from './components/schedule/schedule.component';
-import { AboutComponent } from './components/about/about.component';
+
+
 import {MatInputModule} from '@angular/material/input';
 import { MatTableModule } from '@angular/material/table';
 import {MatFormFieldModule} from '@angular/material/form-field';
-import {FormsModule} from '@angular/forms';
-import { PersonFormDialogComponent } from './components/person-crud/person-form-dialog/person-form-dialog.component';
-import { PersonComponent } from './components/person-crud/person/person.component';
-import { ConfirmationDialogComponent } from './components/confirmation-dialog/confirmation-dialog.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatDialogModule} from '@angular/material/dialog';
-import { SubscriptionComponent } from './components/subscription/subscription.component';
+
 
 import {MatCardModule} from '@angular/material/card';
 import { MatRadioModule } from '@angular/material/radio';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
-import { SnackshopComponent } from './components/snackshop/snackshop.component';
+
 import { TranslateModule} from '@ngx-translate/core';
 import {TranslateLoader} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import { TranslationComponent } from './components/translation/translation.component';
+import { CoachComponent } from './components/coach/coach/coach.component';
+import { CoachAddEditComponent } from './components/coach/coach-add-edit/coach-add-edit.component';
 
 @NgModule({
   declarations: [
@@ -55,14 +55,16 @@ import { TranslationComponent } from './components/translation/translation.compo
     ToolbarComponent,
     SidenavComponent,
     ProgramsComponent,
-    ScheduleComponent,
-    AboutComponent,
-    PersonFormDialogComponent,
-    PersonComponent,
-    ConfirmationDialogComponent,
-    SubscriptionComponent,
-    SnackshopComponent,
+    
+    
+    CoachComponent,
+
+
+    
+   
     TranslationComponent,
+    CoachAddEditComponent,
+   
     
  
     
@@ -104,11 +106,11 @@ import { TranslationComponent } from './components/translation/translation.compo
     MatPaginatorModule,
     MatTableModule,
     MatDialogModule,
-
+    ReactiveFormsModule,
     MatProgressSpinnerModule,
-  MatTableModule,
+
   MatCardModule
- ,MatRadioModule
+ ,MatRadioModule,
 
  ],
   providers: [],
